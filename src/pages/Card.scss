@@ -1,0 +1,125 @@
+@use '../scss/Color_root.scss' as *;
+
+.cart_Wrapper {
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+
+    img {
+        cursor: pointer;
+        width: 25rem;
+        height: 27rem;
+        padding: 1rem 1rem;
+        mix-blend-mode: color-burn;
+    }
+
+    .detail {
+        padding-left: 3rem;
+        width: 70rem;
+
+        .cartTitle {
+            text-transform: capitalize;
+            font-size: 2rem;
+        }
+
+        .description {
+            color: rgba(0, 0, 0, 0.684);
+        }
+
+        p {
+            padding-top: 0.5rem;
+        }
+
+        .cartPrice {
+            font-weight: bold;
+        }
+
+        .cart_btn {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            color: #ffffff;
+            cursor: pointer;
+            height: 3rem;
+            width: 13rem;
+            background: $color;
+            border: none;
+        }
+
+        .cartQuantity {
+            margin-top: 1rem;
+            background: rgba(174, 174, 174, 0.306);
+            width: 13rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.3rem;
+
+            button {
+                margin: 0 3.5rem;
+                background: none;
+                border: none;
+                color: $color;
+            }
+
+            .qty {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .Load {
+        border-bottom: 0.8rem solid $color;
+        text-align: center;
+        border-radius: 0.2rem;
+        width: 10rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .loading {
+        position: fixed;
+        bottom: 40rem;
+        height: 80vh;
+    }
+
+    .cart_Wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .detail {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            width: 100%;
+
+            .cartTitle {
+                font-size: 2rem;
+            }
+        }
+
+        .cartdetails {
+            display: flex;
+
+            .cartQuantity {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
